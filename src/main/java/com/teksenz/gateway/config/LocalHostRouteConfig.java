@@ -13,6 +13,9 @@ public class LocalHostRouteConfig {
                 .route(r->r.path("/api/v1/course*","/api/v1/course/*")
                         .uri("http://localhost:8080")
                         .id("course-service"))
+                .route(r->r.path("/api/v1/student*","/api/v1/student/*",
+                        "/api/v1/referee*","/api/v1/referee/*")
+                        .uri("http://localhost:8081"))
                 .build();
     }
 }
